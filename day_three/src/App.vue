@@ -1,10 +1,12 @@
 <script setup>
 import UserCard from "./components/UserCard.vue";
 const users = [
-  { name: "Abebe ", role: "Team Leader" },
-  { name: "Solomon ", role: "Finance Officer" },
-  { name: "Kebede ", role: "CTO" },
+  { name: "Abebe ", role: "Team Leader", status: "offline" },
+  { name: "Solomon ", role: "Finance Officer", status: "online" },
+  { name: "Kebede ", role: "CTO", status: "offline" },
 ];
+
+const showName = (name) => alert(`User ${name}`);
 </script>
 
 <template>
@@ -16,8 +18,14 @@ const users = [
     >
       Users
     </h1>
-    <div class="flex gap-3 mt-3 flex-col md:flex-row">
-      <UserCard v-for="user in users" :name="user.name" :role="user.role" />
+    <div class="flex gap-4 mt-3 flex-col md:flex-row">
+      <UserCard
+        v-for="user in users"
+        :name="user.name"
+        :role="user.role"
+        :status="user.status"
+        @view-profile="showName(user.name)"
+      />
     </div>
   </div>
 </template>
