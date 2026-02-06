@@ -13,8 +13,8 @@ const viewProfile = () => {
   <div
     :class="
       status === 'online'
-        ? 'flex gap-3 bg-white/5 px-4 md:px-8 py-5 rounded-2xl items-center hover:bg-white/10 cursor-pointer border border-dashed border-green-600/50 scale-105'
-        : 'flex gap-3 bg-white/5 px-4 md:px-8 py-5 rounded-2xl items-center hover:bg-white/10 cursor-pointer'
+        ? 'flex gap-3 bg-white/5 px-4 md:px-8 py-5 rounded-2xl items-center hover:bg-white/10 cursor-pointer border border-dashed border-green-600/50 scale-105 hover:scale-110 transition-all'
+        : 'flex gap-3 bg-white/5 px-4 md:px-8 py-5 rounded-2xl items-center hover:bg-white/10 cursor-pointer hover:scale-105'
     "
   >
     <div class="flex flex-col items-center justify-center">

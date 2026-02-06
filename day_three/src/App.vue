@@ -1,10 +1,11 @@
 <script setup>
+import { ref } from "vue";
 import UserCard from "./components/UserCard.vue";
-const users = [
+const users = ref([
   { name: "Abebe ", role: "Team Leader", status: "offline" },
   { name: "Solomon ", role: "Finance Officer", status: "online" },
   { name: "Kebede ", role: "CTO", status: "offline" },
-];
+]);
 
 const showName = (name) => alert(`User ${name}`);
 </script>
