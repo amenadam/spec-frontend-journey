@@ -1,8 +1,11 @@
 <script setup>
 import { ref, watch } from "vue";
+import { useToggle } from "./composables/toggle";
 
 const password = ref("");
 const message = ref("");
+
+const { state, toggle } = useToggle(true);
 
 const passwordChecker = (psd) => {
   const passwordRegex = /^[a-zA-Z!@#$%^&*()_+\-=\[\]{}|;':",./<>?]*$/; //but not working
@@ -31,6 +34,16 @@ watch(password, (newPsd) => {
     class="w-screen h-screen flex flex-col items-center justify-center bg-black text-white"
   >
     <div
+      @click="toggle"
+      :class="[
+        state ? 'justify-end bg-green-500' : 'bg-white/50 justify-start',
+        'flex absolute top-20 items-center px-1 w-18 cursor-pointer h-10 rounded-full transition-all',
+      ]"
+    >
+      <div :class="['h-8 w-8 bg-white rounded-full']"></div>
+    </div>
+    <div
+      v-if="state"
       class="border border-white/10 rounded-2xl flex flex-col items-center px-4 py-8"
     >
       <h1
