@@ -3,9 +3,7 @@ import { ref } from "vue";
 const pageNo = ref("");
 </script>
 <template>
-  <div
-    class="w-screen h-screen flex flex-col items-center justify-center bg-black"
-  >
+  <div class="h-screen flex flex-col items-center justify-center bg-black">
     <h1 class="text-white font-bold text-3xl">First Time Creating Nuxt App</h1>
     <div class="flex gap-3 mt-3">
       <NuxtLink
