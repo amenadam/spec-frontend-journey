@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed w-screen bg-black px-8 py-4 flex justify-between items-center"
+    class="fixed w-screen bg-black border border-b-white/10 px-8 py-4 flex justify-between items-center"
   >
     <NuxtLink class="text-white font-bold" to="/">Amenadam</NuxtLink>
     <ul class="text-white flex gap-10">
