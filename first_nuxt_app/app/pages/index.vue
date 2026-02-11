@@ -21,13 +21,13 @@ const pageNo = ref("");
       <input
         type="text"
         class="bg-white/5 text-white px-4 py-1 rounded-lg focus:outline-none focus:ring-1 focus:ring-white/10"
-        placeholder="Enter dynamic page address"
+        placeholder="Enter user id to get user info"
         v-model="pageNo"
       />
       <NuxtLink
-        :to="{ name: 'daynamic-id', params: { id: pageNo ? pageNo : 0 } }"
+        :to="{ name: 'users-id', params: { id: pageNo ? pageNo : 0 } }"
         class="bg-white text-center rounded-lg px-4 py-1 text-sm font-semibold cursor-pointer hover:opacity-80 hover:scale-95 transition-all"
-        >Dynamic pages</NuxtLink
+        >User pages</NuxtLink
       >
     </div>
   </div>
