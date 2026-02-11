@@ -17,6 +17,7 @@ const pageNo = ref("");
         >Another one</NuxtLink
       >
     </div>
+
     <div class="flex flex-col gap-3 mt-3 min-w-100">
       <input
         type="text"
