@@ -1,5 +1,5 @@
 import express from "express";
-
+import cors from "cors";
 //dummy data
 let users = [
   { _id: "001", fullName: "Abebe Bekele", userType: "Basic" },
@@ -8,12 +8,26 @@ let users = [
 ];
 
 const app = express();
+app.use(cors());
 app.use(express.json());
-app.get("/=", (req, res) => {
+
+app.get("/", (req, res) => {
   res.json({ success: true, message: "API running" });
 });
 app.get("/users", (req, res) => {
   res.json({ success: true, data: users });
 });
+app.get("/users/:id", (req, res) => {
+  const user = users.find((u) => u._id === req.params.id);
 
-app.listen(3000, () => console.log("Server running"));
+  if (!user) {
+    return res.status(404).json({
+      success: false,
+      message: "User not found",
+    });
+  }
+
+  res.json({ success: true, data: user });
+});
+
+app.listen(3001, () => console.log("Server running"));
