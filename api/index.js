@@ -2,9 +2,16 @@ import express from "express";
 import cors from "cors";
 //dummy data
 let users = [
-  { _id: "001", fullName: "Abebe Bekele", userType: "Basic" },
-  { _id: "002", fullName: "Solomon Demissie", userType: "Pro" },
-  { _id: "003", fullName: "Ezra Solomon", userType: "Pro +" },
+  { _id: "1", fullName: "Abebe Bekele", userType: "Basic" },
+  { _id: "2", fullName: "Solomon Demissie", userType: "Pro" },
+  { _id: "3", fullName: "User 3", userType: "Pro +" },
+  { _id: "4", fullName: "Ezra Solomon", userType: "Pro +" },
+  { _id: "5", fullName: "User 5", userType: "Pro +" },
+  { _id: "6", fullName: "User 6", userType: "Pro +" },
+  { _id: "7", fullName: "User 7", userType: "Pro +" },
+  { _id: "8", fullName: "User 8", userType: "Pro +" },
+  { _id: "9", fullName: "User 9", userType: "Pro +" },
+  { _id: "10", fullName: "User 10", userType: "Pro +" },
 ];
 
 const app = express();
